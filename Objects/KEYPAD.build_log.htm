@@ -1,0 +1,218 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.31.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Igor Dymov, Sider, LIC=MPPLD-884JD-NNUAF-63RMV-F58IS-L6TY1
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.31.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14
+Assembler:       Armasm.exe V6.14
+Linker/Locator:  ArmLink.exe V6.14
+Library Manager: ArmAr.exe V6.14
+Hex Converter:   FromElf.exe V6.14
+CPU DLL:         SARMCM3.DLL V5.31.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.46.0.0
+ 
+<h2>Project:</h2>
+C:\work\GD_KEYPAD\KEYPAD.uvprojx
+Project File Date:  12/28/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.14', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+compiling OD.c...
+compiling main.c...
+compiling CO_fifo.c...
+compiling CO_HBconsumer.c...
+compiling CANopen.c...
+compiling CO_driver_ST32F103.c...
+compiling process.c...
+compiling CanOpenNode.c...
+compiling CO_NMT_Heartbeat.c...
+compiling CO_ODinterface.c...
+compiling CO_Emergency.c...
+compiling CO_SDOclient.c...
+compiling CO_SYNC.c...
+compiling CO_TIME.c...
+compiling crc16-ccitt.c...
+compiling CO_LSSmaster.c...
+compiling CO_SDOserver.c...
+compiling CO_PDO.c...
+compiling init.c...
+compiling CO_LSSslave.c...
+compiling flash_data.c...
+compiling led.c...
+compiling systick.c...
+compiling gd32f10x_it.c...
+compiling clib_arm.c...
+compiling keyboard.c...
+compiling os_systick.c...
+compiling gd32f10x_dbg.c...
+compiling gd32f10x_fwdgt.c...
+compiling gd32f10x_gpio.c...
+compiling gd32f10x_misc.c...
+compiling gd32f10x_fmc.c...
+compiling gd32f10x_can.c...
+compiling gd32f10x_pmu.c...
+compiling gd32f10x_spi.c...
+compiling gd32f10x_rcu.c...
+assembling startup_gd32f10x_hd.s...
+compiling cmsis_os2.c...
+compiling system_gd32f10x.c...
+compiling freertos_evr.c...
+compiling gd32f10x_timer.c...
+compiling list.c...
+compiling event_groups.c...
+compiling port.c...
+compiling heap_4.c...
+compiling timers.c...
+compiling queue.c...
+compiling tasks.c...
+linking...
+Program Size: Code=36944 RO-data=1940 RW-data=804 ZI-data=17196  
+".\Objects\KEYPAD.axf" - 0 Error(s), 0 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: RTOS2 Version: 2.1.3
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS-FreeRTOS.10.5.1.pack
+                ARM.CMSIS-FreeRTOS.10.5.1
+                Bundle of FreeRTOS for Cortex-M and Cortex-A
+   * Component: Config Variant: CMSIS RTOS2 Version: 10.5.1
+   * Component: Core Variant: Cortex-M Version: 10.5.1
+   * Component: Event Groups Version: 10.5.1
+   * Component: Heap Variant: Heap_4 Version: 10.5.1
+   * Component: Timers Version: 10.5.1
+   * Component: FreeRTOS Variant: Cortex-M Version: 10.5.1
+
+Package Vendor: GigaDevice
+                https://gd32mcu.com/data/documents/pack/GigaDevice.GD32F10x_DFP.2.1.0.pack
+                GigaDevice.GD32F10x_DFP.2.1.0
+                GigaDevice GD32F10x Series Device Support and Examples
+   * Component: CAN Version: 2.2.4
+   * Component: DBG Version: 2.2.4
+   * Component: FMC Version: 2.2.4
+   * Component: FWDGT Version: 2.2.4
+   * Component: GPIO Version: 2.2.4
+   * Component: MISC Version: 2.2.4
+   * Component: PMU Version: 2.2.4
+   * Component: RCU Version: 2.2.4
+   * Component: SPI_I2S Version: 2.2.4
+   * Component: TIMER Version: 2.2.4
+   * Component: GD32F10x_libopt Version: 2.2.4
+   * Component: Startup Version: 2.2.4
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\RTOS
+  .\RTE\_Target_1
+  C:\Users\i.dymov\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\CMSIS\RTOS2\FreeRTOS\Include
+  C:\Users\i.dymov\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include
+  C:\Users\i.dymov\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\portable\GCC\ARM_CM3
+  C:\Users\i.dymov\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include
+  C:\Users\i.dymov\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include
+  C:\Users\i.dymov\AppData\Local\Arm\Packs\GigaDevice\GD32F10x_DFP\2.1.0\Device\Firmware\Peripherals\inc
+  C:\Users\i.dymov\AppData\Local\Arm\Packs\GigaDevice\GD32F10x_DFP\2.1.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ::CMSIS:RTOS2:2.1.3 (API)
+      Include file:  CMSIS\RTOS2\Include\cmsis_os2.h
+
+   * Component: ARM.FreeRTOS::RTOS:Config:CMSIS RTOS2:10.5.1
+      Include file:  CMSIS\RTOS2\FreeRTOS\Config\ARMCM\FreeRTOSConfig.h
+
+   * Component: ARM.FreeRTOS::RTOS:Core:Cortex-M:10.5.1
+      Source file:   Source\portable\GCC\ARM_CM3\port.c
+      Include file:  Source\include\semphr.h
+      Include file:  Source\include\FreeRTOS.h
+      Source file:   Source\queue.c
+      Source file:   Source\tasks.c
+      Include file:  Source\include\task.h
+      Include file:  Source\include\queue.h
+      Source file:   Source\list.c
+      Source file:   CMSIS\RTOS2\FreeRTOS\Source\freertos_evr.c
+
+   * Component: ARM.FreeRTOS::RTOS:Event Groups:10.5.1
+      Source file:   Source\event_groups.c
+      Include file:  Source\include\event_groups.h
+
+   * Component: ARM.FreeRTOS::RTOS:Heap:Heap_4:10.5.1
+      Source file:   Source\portable\MemMang\heap_4.c
+
+   * Component: ARM.FreeRTOS::RTOS:Timers:10.5.1
+      Include file:  Source\include\timers.h
+      Source file:   Source\timers.c
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: ARM::CMSIS:RTOS2:FreeRTOS:Cortex-M:10.5.1
+      Include file:  CMSIS\RTOS2\FreeRTOS\Include\freertos_mpool.h
+      Source file:   CMSIS\RTOS2\FreeRTOS\Source\cmsis_os2.c
+      Source file:   CMSIS\RTOS2\FreeRTOS\Source\ARM\clib_arm.c
+      Source file:   CMSIS\RTOS2\FreeRTOS\Source\os_systick.c
+
+   * Component: GigaDevice::Device:GD32F10x_StdPeripherals:CAN:2.2.4
+      Include file:  Device\Firmware\Peripherals\inc\gd32f10x_can.h
+      Source file:   Device\Firmware\Peripherals\src\gd32f10x_can.c
+
+   * Component: GigaDevice::Device:GD32F10x_StdPeripherals:DBG:2.2.4
+      Source file:   Device\Firmware\Peripherals\src\gd32f10x_dbg.c
+      Include file:  Device\Firmware\Peripherals\inc\gd32f10x_dbg.h
+
+   * Component: GigaDevice::Device:GD32F10x_StdPeripherals:FMC:2.2.4
+      Include file:  Device\Firmware\Peripherals\inc\gd32f10x_fmc.h
+      Source file:   Device\Firmware\Peripherals\src\gd32f10x_fmc.c
+
+   * Component: GigaDevice::Device:GD32F10x_StdPeripherals:FWDGT:2.2.4
+      Source file:   Device\Firmware\Peripherals\src\gd32f10x_fwdgt.c
+      Include file:  Device\Firmware\Peripherals\inc\gd32f10x_fwdgt.h
+
+   * Component: GigaDevice::Device:GD32F10x_StdPeripherals:GPIO:2.2.4
+      Include file:  Device\Firmware\Peripherals\inc\gd32f10x_gpio.h
+      Source file:   Device\Firmware\Peripherals\src\gd32f10x_gpio.c
+
+   * Component: GigaDevice::Device:GD32F10x_StdPeripherals:MISC:2.2.4
+      Include file:  Device\Firmware\Peripherals\inc\gd32f10x_misc.h
+      Source file:   Device\Firmware\Peripherals\src\gd32f10x_misc.c
+
+   * Component: GigaDevice::Device:GD32F10x_StdPeripherals:PMU:2.2.4
+      Source file:   Device\Firmware\Peripherals\src\gd32f10x_pmu.c
+      Include file:  Device\Firmware\Peripherals\inc\gd32f10x_pmu.h
+
+   * Component: GigaDevice::Device:GD32F10x_StdPeripherals:RCU:2.2.4
+      Source file:   Device\Firmware\Peripherals\src\gd32f10x_rcu.c
+      Include file:  Device\Firmware\Peripherals\inc\gd32f10x_rcu.h
+
+   * Component: GigaDevice::Device:GD32F10x_StdPeripherals:SPI_I2S:2.2.4
+      Include file:  Device\Firmware\Peripherals\inc\gd32f10x_spi.h
+      Source file:   Device\Firmware\Peripherals\src\gd32f10x_spi.c
+
+   * Component: GigaDevice::Device:GD32F10x_StdPeripherals:TIMER:2.2.4
+      Source file:   Device\Firmware\Peripherals\src\gd32f10x_timer.c
+      Include file:  Device\Firmware\Peripherals\inc\gd32f10x_timer.h
+
+   * Component: GigaDevice::Device:GD32F10x_libopt:2.2.4
+      Include file:  Device\Include\gd32f10x_libopt.h
+
+   * Component: GigaDevice::Device:Startup:2.2.4
+      Include file:  Device\Include\gd32f10x.h
+      Source file:   Device\Source\ARM\startup_gd32f10x_hd.s
+      Source file:   Device\Source\system_gd32f10x.c
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>
