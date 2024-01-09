@@ -332,12 +332,14 @@ ODR_t OD_writeBRIGTH(OD_stream_t *stream,const void *buf,
      return ( ODR_OK );
 }
 
+static uint8_t key_mask;
+static  uint8_t data;
 /*
  *
  */
 void vProcessTask( void * argument )
 {
-    uint8_t key_mask;
+    
 	for(;;)
 	{
 		/*Обработка событий от клавиатуры*/
@@ -375,7 +377,7 @@ void vProcessTask( void * argument )
 				   key_mask = 0U;
 				   break;
 			}
-			uint8_t data;
+			
 			OD_get_value(OD_ENTRY_H2000_digitalInputModuleKeysStates,0x01,&data,1,true);
 			if ( TempEvent.Status == MAKECODE )
 			{

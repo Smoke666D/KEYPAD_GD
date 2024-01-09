@@ -36,6 +36,6 @@ uint8_t co_drv_mutex_lock(void);
 uint8_t co_drv_mutex_unlock(void);
 void CO_CANsetConfigurationMode(void *CANptr);
 void  prv_read_can_received_msg(uint32_t can_periph, uint32_t fifo);
-void CAN_SendMessage();
+void CAN_SendMessage( void );
 void HAL_CAN_ErrorCallback( uint32_t can_periph );
 #endif /* KEYPAD_CO_DRIVER_ST32F103_H_ */

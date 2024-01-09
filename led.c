@@ -326,7 +326,7 @@ void vSetBrigth(uint8_t brigth)
 void vLedProcess( void )
 {
 	/*Cбравысваем флаг тамера 4*/
-	timer_flag_clear(TIMER3,TIMER_FLAG_UP);
+	
 
 	uint8_t data[SPI_PACKET_SIZE];
 	uint8_t temp_led;

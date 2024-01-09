@@ -56,7 +56,7 @@
 //  <o>Total heap size [bytes] <0-0xFFFFFFFF>
 //  <i> Heap memory size in bytes.
 //  <i> Default: 8192
-#define configTOTAL_HEAP_SIZE                   ((size_t)4000)
+#define configTOTAL_HEAP_SIZE                   ((size_t)1000)
 
 //  <o>Kernel tick frequency [Hz] <0-0xFFFFFFFF>
 //  <i> Kernel tick rate in Hz.

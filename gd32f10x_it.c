@@ -155,30 +155,30 @@ void USBD_HP_CAN0_TX_IRQHandler( void )
 	
       if ( can_interrupt_flag_get(CAN0,CAN_INT_FLAG_MTF0) == SET )
 			{
-				can_interrupt_flag_clear (CAN0, CAN_INT_FLAG_MTF0);
-					if (	can_flag_get(CAN0,CAN_FLAG_MTE0) == SET )
-				  {
+				  can_interrupt_flag_clear (CAN0, CAN_INT_FLAG_MTF0);
+				//	if (	can_flag_get(CAN0,CAN_FLAG_MTE0) == SET )
+				//  {
 							CAN_SendMessage();
-					}
+				//	}
 			}
 			
 			 if ( can_interrupt_flag_get(CAN0,CAN_INT_FLAG_MTF1) == SET )
 		{
-				can_interrupt_flag_clear (CAN0, CAN_INT_FLAG_MTF1);
-					if (	can_flag_get(CAN0,CAN_FLAG_MTE1) == SET )
-				  {
+			can_interrupt_flag_clear (CAN0, CAN_INT_FLAG_MTF1);
+				//	if (	can_flag_get(CAN0,CAN_FLAG_MTE1) == SET )
+				//  {
 							CAN_SendMessage();
-					}
+				//	}
 			}
 				
 			 if ( can_interrupt_flag_get(CAN0,CAN_INT_FLAG_MTF2) == SET )
 		
 			 {
 				can_interrupt_flag_clear (CAN0, CAN_INT_FLAG_MTF2);
-	if (	can_flag_get(CAN0,CAN_FLAG_MTE2) == SET )
-				  {
+	     // if (	can_flag_get(CAN0,CAN_FLAG_MTE2) == SET )
+				//{
 							CAN_SendMessage();
-					}
+				//}
 			}
 }
 
@@ -188,7 +188,7 @@ void  TIMER3_IRQHandler ( void )
 		if(SET == timer_interrupt_flag_get(TIMER3, TIMER_INT_FLAG_UP))
 		{
 			/* clear channel 0 interrupt bit */
-			timer_interrupt_flag_clear(TIMER3, TIMER_INT_FLAG_UP);
 			vLedProcess();
+			timer_interrupt_flag_clear(TIMER3, TIMER_INT_FLAG_UP);
 		}
 }

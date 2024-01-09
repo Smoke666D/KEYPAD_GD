@@ -107,8 +107,8 @@ int main( void )
   CanOpenPeriodicHandle = osThreadNew(vCanOpenPeriodicProcess, NULL, &CanOpenPeriodic_attributes);
 
   /* creation of CanOpenProcess */
-  CanOpenProcessHandle = osThreadNew(vCanOpenProcess, NULL, &CanOpenProcess_attributes);
-	  vFDInit();
+   CanOpenProcessHandle = osThreadNew(vCanOpenProcess, NULL, &CanOpenProcess_attributes);
+	 vFDInit();
    vLedInit(TIMER1);
    vSetupKeyboard();
    vProceesInit();
@@ -152,7 +152,7 @@ void StartDefaultTask(void *argument)
   {
     xEventGroupWaitBits(xResetEventHandle,RESTART_DISABLE,pdFALSE,pdFALSE,portMAX_DELAY );
     osDelay(500);
-	//	fwdgt_counter_reload();
+		fwdgt_counter_reload();
    
   }
   /* USER CODE END 5 */

@@ -18,6 +18,7 @@ void vInit_DeviceConfig( void )
 	SystickConfig();
 	MX_GPIO_Init( );
 	InitBaseTick();
+	nvic_config();
 	MX_SPI2_Init( );
 	MX_TIM1_Init();
 	MX_TIM3_Init( );
@@ -25,7 +26,7 @@ void vInit_DeviceConfig( void )
  
 	MX_CAN_Init(CAN0,500);
 	
-	nvic_config();
+	MX_IWDG_Init();
 	return;
 }
 
@@ -135,13 +136,13 @@ static void MX_RCU_Init( void )
                  break;
     }
 	
-	can_init(CAN0, &can_parameter);
+	 can_init(CAN0, &can_parameter);
 
 //Инициализация портов CAN0
 	 gpio_init(GPIOB,GPIO_MODE_IPU,GPIO_OSPEED_50MHZ,GPIO_PIN_8);
    gpio_init(GPIOB,GPIO_MODE_AF_PP,GPIO_OSPEED_50MHZ,GPIO_PIN_9);
  
-  gpio_pin_remap_config(GPIO_CAN_PARTIAL_REMAP ,ENABLE);
+   gpio_pin_remap_config(GPIO_CAN_PARTIAL_REMAP ,ENABLE);
 
 }
 

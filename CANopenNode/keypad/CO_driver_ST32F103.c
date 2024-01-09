@@ -28,6 +28,7 @@
 
 #include "301/CO_driver.h"
 #include "CO_driver_ST32F103.h"
+#include "init.h"
 
 /* CAN masks for identifiers */
 #define CANID_MASK                              0x07FF  /*!< CAN standard ID mask */
@@ -515,7 +516,6 @@ int CAN_GetRxMessage(uint32_t can_periph, uint32_t RxFifo,  CO_CANrxMsg_t * pCAN
     	 pCANData->data[6] = (uint8_t) g_receive_message.rx_data[6];
     	 pCANData->data[7] = (uint8_t) g_receive_message.rx_data[7];
     }
-		can_fifo_release(can_periph, RxFifo);
     return 1;
 }
 

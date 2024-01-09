@@ -22,62 +22,457 @@ Dialog DLL:      TCM.DLL V1.46.0.0
  
 <h2>Project:</h2>
 C:\work\GD_KEYPAD\KEYPAD.uvprojx
-Project File Date:  12/28/2023
+Project File Date:  01/09/2024
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.14', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Target 1'
 compiling OD.c...
-compiling main.c...
 compiling CO_fifo.c...
+compiling main.c...
 compiling CO_HBconsumer.c...
-compiling CANopen.c...
-compiling CO_driver_ST32F103.c...
-compiling process.c...
+compiling CO_ODinterface.c...
 compiling CanOpenNode.c...
 compiling CO_NMT_Heartbeat.c...
-compiling CO_ODinterface.c...
 compiling CO_Emergency.c...
+compiling process.c...
+compiling CO_driver_ST32F103.c...
+compiling CANopen.c...
 compiling CO_SDOclient.c...
-compiling CO_SYNC.c...
 compiling CO_TIME.c...
+compiling CO_SYNC.c...
 compiling crc16-ccitt.c...
 compiling CO_LSSmaster.c...
+compiling CO_LSSslave.c...
 compiling CO_SDOserver.c...
 compiling CO_PDO.c...
+init.c(1): warning: In file included from...
+../GD_KEYPAD/init.h(7): warning: In file included from...
+../GD_KEYPAD/flash_data.h(8): warning: In file included from...
+../GD_KEYPAD/main.h(18): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+init.c(18): warning: implicit declaration of function 'SystickConfig' is invalid in C99 [-Wimplicit-function-declaration]
+        SystickConfig();
+        ^
+init.c(70): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+ timer_initpara.prescaler         = uwPrescalerValue;
+                                  ~ ^~~~~~~~~~~~~~~~
+init.c(1): warning: In file included from...
+../GD_KEYPAD/init.h(5): warning: In file included from...
+C:/Users/i.dymov/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include\FreeRTOS.h(59): warning: In file included from...
+./RTE/RTOS\FreeRTOSConfig.h(46): warning: In file included from...
+C:/Users/i.dymov/AppData/Local/Arm/Packs/GigaDevice/GD32F10x_DFP/2.1.0/Device/Include\gd32f10x.h(374): warning: In file included from...
+C:/Users/i.dymov/AppData/Local/Arm/Packs/GigaDevice/GD32F10x_DFP/2.1.0/Device/Include/gd32f10x_libopt.h(74): warning: In file included from...
+C:/Users/i.dymov/AppData/Local/Arm/Packs/GigaDevice/GD32F10x_DFP/2.1.0/Device/Firmware/Peripherals/inc\gd32f10x_timer.h(256): warning: padding struct 'timer_parameter_struct' with 2 bytes to align 'period' [-Wpadded]
+    uint32_t period;                            /*!< period value */
+             ^
+C:/Users/i.dymov/AppData/Local/Arm/Packs/GigaDevice/GD32F10x_DFP/2.1.0/Device/Firmware/Peripherals/inc\gd32f10x_timer.h(251): warning: padding size of 'timer_parameter_struct' with 1 byte to alignment boundary [-Wpadded]
+typedef struct
+        ^
+init.c(73): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+ timer_initpara.period            = (1000000U / 1000U) - 1U;;
+                                                            ^
+init.c(55): warning: unused variable 'pFLatency' [-Wunused-variable]
+  uint32_t              pFLatency;
+                        ^
+init.c(98): warning: unused parameter 'can_periph' [-Wunused-parameter]
+ void MX_CAN_Init( uint32_t can_periph, uint16_t bit_rate)
+                            ^
+init.c(325): warning: unused function 'MX_TIM2_Init' [-Wunused-function]
+static void MX_TIM2_Init(void)
+            ^
+9 warnings generated.
 compiling init.c...
-compiling CO_LSSslave.c...
+flash_data.c(8): warning: In file included from...
+../GD_KEYPAD/flash_data.h(8): warning: In file included from...
+../GD_KEYPAD/main.h(18): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+flash_data.c(9): warning: In file included from...
+./CANopenNode/301\CO_NMT_Heartbeat.h(30): warning: In file included from...
+./CANopenNode\301/CO_ODinterface.h(209): warning: padding size of 'OD_stream_t' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+./CANopenNode\301/CO_ODinterface.h(514): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        uint8_t mask = ~(1 << (subIndex & 0x07));
+                ~~~~   ^~~~~~~~~~~~~~~~~~~~~~~~~
+./CANopenNode\301/CO_ODinterface.h(536): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        uint8_t mask = 1 << (subIndex & 0x07);
+                ~~~~   ~~^~~~~~~~~~~~~~~~~~~~
+flash_data.c(9): warning: In file included from...
+./CANopenNode/301\CO_NMT_Heartbeat.h(31): warning: In file included from...
+./CANopenNode\301/CO_Emergency.h(449): warning: 'CO_CONFIG_EM_CONSUMER' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_EM) & CO_CONFIG_EM_CONSUMER) || defined CO_DOXYGEN
+                      ^
+./CANopenNode\301/CO_Emergency.h(522): warning: 'CO_CONFIG_EM_CONSUMER' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_EM) & CO_CONFIG_EM_CONSUMER) || defined CO_DOXYGEN
+                      ^
+./CANopenNode\301/CO_Emergency.h(551): warning: 'CO_CONFIG_EM_CONSUMER' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_EM) & CO_CONFIG_EM_CONSUMER) || defined CO_DOXYGEN
+                      ^
+./CANopenNode\301/CO_Emergency.h(644): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+    uint8_t bitmask = 1 << (errorBit & 0x7);
+            ~~~~~~~   ~~^~~~~~~~~~~~~~~~~~~
+flash_data.c(11): warning: In file included from...
+./CANopenNode\CANopen.h(34): warning: In file included from...
+./CANopenNode/301/CO_HBconsumer.h(42): warning: 'CO_CONFIG_HB_CONS_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_HB_CONS) & CO_CONFIG_HB_CONS_ENABLE) || defined CO_DOXYGEN
+      ^
+./CANopenNode/301/CO_HBconsumer.h(36): note: expanded from macro 'CO_CONFIG_HB_CONS'
+#define CO_CONFIG_HB_CONS (CO_CONFIG_HB_CONS_ENABLE | \
+                           ^
+./CANopenNode/301/CO_HBconsumer.h(42): warning: 'CO_CONFIG_HB_CONS_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_HB_CONS) & CO_CONFIG_HB_CONS_ENABLE) || defined CO_DOXYGEN
+                           ^
+flash_data.c(11): warning: In file included from...
+./CANopenNode\CANopen.h(38): warning: In file included from...
+./CANopenNode/301/CO_SYNC.h(43): warning: 'CO_CONFIG_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_SYNC) & CO_CONFIG_SYNC_ENABLE) || defined CO_DOXYGEN
+      ^
+./CANopenNode/301/CO_SYNC.h(36): note: expanded from macro 'CO_CONFIG_SYNC'
+#define CO_CONFIG_SYNC (CO_CONFIG_SYNC_ENABLE | \
+                        ^
+./CANopenNode/301/CO_SYNC.h(43): warning: 'CO_CONFIG_SYNC_PRODUCER' is not defined, evaluates to 0 [-Wundef]
+./CANopenNode/301/CO_SYNC.h(37): note: expanded from macro 'CO_CONFIG_SYNC'
+                        CO_CONFIG_SYNC_PRODUCER | \
+                        ^
+./CANopenNode/301/CO_SYNC.h(43): warning: 'CO_CONFIG_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_SYNC) & CO_CONFIG_SYNC_ENABLE) || defined CO_DOXYGEN
+                        ^
+flash_data.c(11): warning: In file included from...
+./CANopenNode\CANopen.h(39): warning: In file included from...
+./CANopenNode/301/CO_PDO.h(46): warning: 'CO_CONFIG_PDO_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_PDO) & (CO_CONFIG_RPDO_ENABLE | CO_CONFIG_TPDO_ENABLE)) || defined CO_DOXYGEN
+      ^
+./CANopenNode/301/CO_PDO.h(39): note: expanded from macro 'CO_CONFIG_PDO'
+                       CO_CONFIG_PDO_SYNC_ENABLE | \
+                       ^
+./CANopenNode/301/CO_PDO.h(200): warning: 'CO_CONFIG_PDO_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_PDO) & CO_CONFIG_PDO_OD_IO_ACCESS) || defined CO_DOXYGEN
+      ^
+./CANopenNode/301/CO_PDO.h(39): note: expanded from macro 'CO_CONFIG_PDO'
+                       CO_CONFIG_PDO_SYNC_ENABLE | \
+                       ^
+./CANopenNode/301/CO_PDO.h(222): warning: 'CO_CONFIG_PDO_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_PDO) & CO_CONFIG_FLAG_OD_DYNAMIC) || defined CO_DOXYGEN
+      ^
+./CANopenNode/301/CO_PDO.h(39): note: expanded from macro 'CO_CONFIG_PDO'
+                       CO_CONFIG_PDO_SYNC_ENABLE | \
+                       ^
+./CANopenNode/301/CO_PDO.h(244): warning: 'CO_CONFIG_PDO_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_PDO) & CO_CONFIG_RPDO_ENABLE) || defined CO_DOXYGEN
+      ^
+./CANopenNode/301/CO_PDO.h(39): note: expanded from macro 'CO_CONFIG_PDO'
+                       CO_CONFIG_PDO_SYNC_ENABLE | \
+                       ^
+./CANopenNode/301/CO_PDO.h(248): warning: 'CO_CONFIG_PDO_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_PDO) & CO_CONFIG_PDO_SYNC_ENABLE) || defined CO_DOXYGEN
+      ^
+./CANopenNode/301/CO_PDO.h(39): note: expanded from macro 'CO_CONFIG_PDO'
+                       CO_CONFIG_PDO_SYNC_ENABLE | \
+                       ^
+./CANopenNode/301/CO_PDO.h(248): warning: 'CO_CONFIG_PDO_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_PDO) & CO_CONFIG_PDO_SYNC_ENABLE) || defined CO_DOXYGEN
+                       ^
+./CANopenNode/301/CO_PDO.h(267): warning: 'CO_CONFIG_PDO_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_PDO) & CO_CONFIG_PDO_SYNC_ENABLE) || defined CO_DOXYGEN
+      ^
+./CANopenNode/301/CO_PDO.h(39): note: expanded from macro 'CO_CONFIG_PDO'
+                       CO_CONFIG_PDO_SYNC_ENABLE | \
+                       ^
+./CANopenNode/301/CO_PDO.h(267): warning: 'CO_CONFIG_PDO_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_PDO) & CO_CONFIG_PDO_SYNC_ENABLE) || defined CO_DOXYGEN
+                       ^
+./CANopenNode/301/CO_PDO.h(273): warning: 'CO_CONFIG_PDO_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_PDO) & CO_CONFIG_RPDO_TIMERS_ENABLE) || defined CO_DOXYGEN
+      ^
+./CANopenNode/301/CO_PDO.h(39): note: expanded from macro 'CO_CONFIG_PDO'
+                       CO_CONFIG_PDO_SYNC_ENABLE | \
+                       ^
+./CANopenNode/301/CO_PDO.h(280): warning: 'CO_CONFIG_PDO_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_PDO) & CO_CONFIG_FLAG_CALLBACK_PRE) || defined CO_DOXYGEN
+      ^
+./CANopenNode/301/CO_PDO.h(39): note: expanded from macro 'CO_CONFIG_PDO'
+                       CO_CONFIG_PDO_SYNC_ENABLE | \
+                       ^
+./CANopenNode/301/CO_PDO.h(207): warning: padding struct 'CO_PDO_common_t' with 2 bytes to align 'OD_IO' [-Wpadded]
+    OD_IO_t OD_IO[CO_PDO_MAX_MAPPED_ENTRIES];
+            ^
+./CANopenNode/301/CO_PDO.h(234): warning: padding struct 'CO_PDO_common_t' with 2 bytes to align 'OD_communicationParam_ext' [-Wpadded]
+    OD_extension_t OD_communicationParam_ext;
+                   ^
+./CANopenNode/301/CO_PDO.h(315): warning: 'CO_CONFIG_PDO_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_PDO) & CO_CONFIG_PDO_SYNC_ENABLE) || defined CO_DOXYGEN
+      ^
+./CANopenNode/301/CO_PDO.h(39): note: expanded from macro 'CO_CONFIG_PDO'
+                       CO_CONFIG_PDO_SYNC_ENABLE | \
+                       ^
+./CANopenNode/301/CO_PDO.h(315): warning: 'CO_CONFIG_PDO_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_PDO) & CO_CONFIG_PDO_SYNC_ENABLE) || defined CO_DOXYGEN
+                       ^
+./CANopenNode/301/CO_PDO.h(326): warning: 'CO_CONFIG_PDO_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_PDO) & CO_CONFIG_FLAG_CALLBACK_PRE) || defined CO_DOXYGEN
+      ^
+./CANopenNode/301/CO_PDO.h(39): note: expanded from macro 'CO_CONFIG_PDO'
+                       CO_CONFIG_PDO_SYNC_ENABLE | \
+                       ^
+./CANopenNode/301/CO_PDO.h(360): warning: 'CO_CONFIG_PDO_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_PDO) & CO_CONFIG_RPDO_TIMERS_ENABLE) || defined CO_DOXYGEN
+      ^
+./CANopenNode/301/CO_PDO.h(39): note: expanded from macro 'CO_CONFIG_PDO'
+                       CO_CONFIG_PDO_SYNC_ENABLE | \
+                       ^
+./CANopenNode/301/CO_PDO.h(372): warning: 'CO_CONFIG_PDO_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_PDO) & CO_CONFIG_TPDO_ENABLE) || defined CO_DOXYGEN
+      ^
+./CANopenNode/301/CO_PDO.h(39): note: expanded from macro 'CO_CONFIG_PDO'
+                       CO_CONFIG_PDO_SYNC_ENABLE | \
+                       ^
+./CANopenNode/301/CO_PDO.h(386): warning: 'CO_CONFIG_PDO_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_PDO) & CO_CONFIG_PDO_SYNC_ENABLE) || defined CO_DOXYGEN
+      ^
+./CANopenNode/301/CO_PDO.h(39): note: expanded from macro 'CO_CONFIG_PDO'
+                       CO_CONFIG_PDO_SYNC_ENABLE | \
+                       ^
+./CANopenNode/301/CO_PDO.h(386): warning: 'CO_CONFIG_PDO_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_PDO) & CO_CONFIG_PDO_SYNC_ENABLE) || defined CO_DOXYGEN
+                       ^
+./CANopenNode/301/CO_PDO.h(394): warning: 'CO_CONFIG_PDO_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_PDO) & CO_CONFIG_TPDO_TIMERS_ENABLE) || defined CO_DOXYGEN
+      ^
+./CANopenNode/301/CO_PDO.h(39): note: expanded from macro 'CO_CONFIG_PDO'
+                       CO_CONFIG_PDO_SYNC_ENABLE | \
+                       ^
+./CANopenNode/301/CO_PDO.h(433): warning: 'CO_CONFIG_PDO_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_PDO) & CO_CONFIG_PDO_SYNC_ENABLE) || defined CO_DOXYGEN
+      ^
+./CANopenNode/301/CO_PDO.h(39): note: expanded from macro 'CO_CONFIG_PDO'
+                       CO_CONFIG_PDO_SYNC_ENABLE | \
+                       ^
+./CANopenNode/301/CO_PDO.h(433): warning: 'CO_CONFIG_PDO_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_PDO) & CO_CONFIG_PDO_SYNC_ENABLE) || defined CO_DOXYGEN
+                       ^
+./CANopenNode/301/CO_PDO.h(472): warning: 'CO_CONFIG_PDO_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_PDO) & CO_CONFIG_TPDO_TIMERS_ENABLE) || defined CO_DOXYGEN
+      ^
+./CANopenNode/301/CO_PDO.h(39): note: expanded from macro 'CO_CONFIG_PDO'
+                       CO_CONFIG_PDO_SYNC_ENABLE | \
+                       ^
+flash_data.c(11): warning: In file included from...
+./CANopenNode\CANopen.h(40): warning: In file included from...
+./CANopenNode/301/CO_TIME.h(41): warning: 'CO_CONFIG_TIME_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_TIME) & CO_CONFIG_TIME_ENABLE) || defined CO_DOXYGEN
+      ^
+./CANopenNode/301/CO_TIME.h(36): note: expanded from macro 'CO_CONFIG_TIME'
+#define CO_CONFIG_TIME (CO_CONFIG_TIME_ENABLE | \
+                        ^
+./CANopenNode/301/CO_TIME.h(41): warning: 'CO_CONFIG_TIME_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_TIME) & CO_CONFIG_TIME_ENABLE) || defined CO_DOXYGEN
+                        ^
+flash_data.c(11): warning: In file included from...
+./CANopenNode\CANopen.h(298): warning: 'CO_CONFIG_HB_CONS_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_HB_CONS) & CO_CONFIG_HB_CONS_ENABLE) || defined CO_DOXYGEN
+      ^
+./CANopenNode/301/CO_HBconsumer.h(36): note: expanded from macro 'CO_CONFIG_HB_CONS'
+#define CO_CONFIG_HB_CONS (CO_CONFIG_HB_CONS_ENABLE | \
+                           ^
+flash_data.c(11): warning: In file included from...
+./CANopenNode\CANopen.h(298): warning: 'CO_CONFIG_HB_CONS_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_HB_CONS) & CO_CONFIG_HB_CONS_ENABLE) || defined CO_DOXYGEN
+                           ^
+./CANopenNode\CANopen.h(332): warning: 'CO_CONFIG_TIME_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_TIME) & CO_CONFIG_TIME_ENABLE) || defined CO_DOXYGEN
+      ^
+./CANopenNode/301/CO_TIME.h(36): note: expanded from macro 'CO_CONFIG_TIME'
+#define CO_CONFIG_TIME (CO_CONFIG_TIME_ENABLE | \
+                        ^
+flash_data.c(11): warning: In file included from...
+./CANopenNode\CANopen.h(332): warning: 'CO_CONFIG_TIME_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_TIME) & CO_CONFIG_TIME_ENABLE) || defined CO_DOXYGEN
+                        ^
+./CANopenNode\CANopen.h(340): warning: 'CO_CONFIG_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_SYNC) & CO_CONFIG_SYNC_ENABLE) || defined CO_DOXYGEN
+      ^
+./CANopenNode\301/CO_SYNC.h(36): note: expanded from macro 'CO_CONFIG_SYNC'
+#define CO_CONFIG_SYNC (CO_CONFIG_SYNC_ENABLE | \
+                        ^
+flash_data.c(11): warning: In file included from...
+./CANopenNode\CANopen.h(340): warning: 'CO_CONFIG_SYNC_PRODUCER' is not defined, evaluates to 0 [-Wundef]
+./CANopenNode\301/CO_SYNC.h(37): note: expanded from macro 'CO_CONFIG_SYNC'
+                        CO_CONFIG_SYNC_PRODUCER | \
+                        ^
+flash_data.c(11): warning: In file included from...
+./CANopenNode\CANopen.h(340): warning: 'CO_CONFIG_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_SYNC) & CO_CONFIG_SYNC_ENABLE) || defined CO_DOXYGEN
+                        ^
+./CANopenNode\CANopen.h(348): warning: 'CO_CONFIG_PDO_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_PDO) & CO_CONFIG_RPDO_ENABLE) || defined CO_DOXYGEN
+      ^
+./CANopenNode/301/CO_PDO.h(39): note: expanded from macro 'CO_CONFIG_PDO'
+                       CO_CONFIG_PDO_SYNC_ENABLE | \
+                       ^
+flash_data.c(11): warning: In file included from...
+./CANopenNode\CANopen.h(355): warning: 'CO_CONFIG_PDO_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_PDO) & CO_CONFIG_TPDO_ENABLE) || defined CO_DOXYGEN
+      ^
+./CANopenNode/301/CO_PDO.h(39): note: expanded from macro 'CO_CONFIG_PDO'
+                       CO_CONFIG_PDO_SYNC_ENABLE | \
+                       ^
+flash_data.c(11): warning: In file included from...
+./CANopenNode\CANopen.h(587): warning: 'CO_CONFIG_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_SYNC) & CO_CONFIG_SYNC_ENABLE) || defined CO_DOXYGEN
+      ^
+./CANopenNode\301/CO_SYNC.h(36): note: expanded from macro 'CO_CONFIG_SYNC'
+#define CO_CONFIG_SYNC (CO_CONFIG_SYNC_ENABLE | \
+                        ^
+flash_data.c(11): warning: In file included from...
+./CANopenNode\CANopen.h(587): warning: 'CO_CONFIG_SYNC_PRODUCER' is not defined, evaluates to 0 [-Wundef]
+./CANopenNode\301/CO_SYNC.h(37): note: expanded from macro 'CO_CONFIG_SYNC'
+                        CO_CONFIG_SYNC_PRODUCER | \
+                        ^
+flash_data.c(11): warning: In file included from...
+./CANopenNode\CANopen.h(587): warning: 'CO_CONFIG_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_SYNC) & CO_CONFIG_SYNC_ENABLE) || defined CO_DOXYGEN
+                        ^
+./CANopenNode\CANopen.h(608): warning: 'CO_CONFIG_PDO_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_PDO) & CO_CONFIG_RPDO_ENABLE) || defined CO_DOXYGEN
+      ^
+./CANopenNode/301/CO_PDO.h(39): note: expanded from macro 'CO_CONFIG_PDO'
+                       CO_CONFIG_PDO_SYNC_ENABLE | \
+                       ^
+flash_data.c(11): warning: In file included from...
+./CANopenNode\CANopen.h(630): warning: 'CO_CONFIG_PDO_SYNC_ENABLE' is not defined, evaluates to 0 [-Wundef]
+#if ((CO_CONFIG_PDO) & CO_CONFIG_TPDO_ENABLE) || defined CO_DOXYGEN
+      ^
+./CANopenNode/301/CO_PDO.h(39): note: expanded from macro 'CO_CONFIG_PDO'
+                       CO_CONFIG_PDO_SYNC_ENABLE | \
+                       ^
+flash_data.c(23): warning: extra ';' outside of a function [-Wextra-semi]
+;
+^
+flash_data.c(9): warning: In file included from...
+./CANopenNode\301/CO_NMT_Heartbeat.h(30): warning: In file included from...
+./CANopenNode/301\CO_ODinterface.h(371): warning: padding struct 'OD_t' with 2 bytes to align 'list' [-Wpadded]
+    OD_entry_t *list;
+                ^
+flash_data.c(177): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'uint32_t *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+      if (   fmc_word_program( ( uint32_t )( dest + i ), *( uint32_t* )( src + i ) ) == FMC_READY)
+                                                          ^~~~~~~~~~~~~~~~~~~~~~~~
+flash_data.c(179): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'uint32_t *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+        if ( *( uint32_t* )( src + i ) != *( uint32_t* )( dest + i ) )
+              ^~~~~~~~~~~~~~~~~~~~~~~~
+flash_data.c(179): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'uint32_t *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+        if ( *( uint32_t* )( src + i ) != *( uint32_t* )( dest + i ) )
+                                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+57 warnings generated.
 compiling flash_data.c...
+led.c(7): warning: In file included from...
+../GD_KEYPAD/led.h(12): warning: In file included from...
+../GD_KEYPAD/main.h(18): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+1 warning generated.
 compiling led.c...
-compiling systick.c...
-compiling gd32f10x_it.c...
 compiling clib_arm.c...
+systick.c(55): warning: no previous prototype for function 'SystickConfig' [-Wmissing-prototypes]
+void SystickConfig(void)
+     ^
+systick.c(55): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SystickConfig(void)
+^
+static 
+systick.c(88): warning: no previous prototype for function 'DelayDecrement' [-Wmissing-prototypes]
+void DelayDecrement(void)
+     ^
+systick.c(88): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void DelayDecrement(void)
+^
+static 
+systick.c(104): warning: implicit conversion loses integer precision: 'unsigned int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        uint8_t  fac_us= SystemCoreClock / 1000000U;
+                 ~~~~~~  ~~~~~~~~~~~~~~~~^~~~~~~~~~
+systick.c(99): warning: no previous prototype for function 'Delay1us' [-Wmissing-prototypes]
+void Delay1us(uint32_t nus)
+     ^
+systick.c(99): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Delay1us(uint32_t nus)
+^
+static 
+4 warnings generated.
+compiling systick.c...
+keyboard.c(8): warning: In file included from...
+../GD_KEYPAD/keyboard.h(11): warning: In file included from...
+../GD_KEYPAD/main.h(18): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+keyboard.c(8): warning: In file included from...
+../GD_KEYPAD/keyboard.h(50): warning: padding size of 'xKeyPortStruct' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct 
+        ^
+../GD_KEYPAD/keyboard.h(55): warning: padding size of 'KeyEvent' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct 
+        ^
+keyboard.c(8): warning: In file included from...
+../GD_KEYPAD/keyboard.h(12): warning: In file included from...
+C:/Users/i.dymov/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include\FreeRTOS.h(1343): warning: padding struct 'struct xSTATIC_QUEUE' with 1 byte to align 'uxDummy8' [-Wpadded]
+        UBaseType_t uxDummy8;
+                    ^
+C:/Users/i.dymov/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include\FreeRTOS.h(1320): warning: padding size of 'struct xSTATIC_QUEUE' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct xSTATIC_QUEUE
+               ^
+keyboard.c(51): warning: unused parameter 'argument' [-Wunused-parameter]
+void vKeyboardTask( void * argument )
+                           ^
+keyboard.c(52): warning: function 'vKeyboardTask' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+7 warnings generated.
 compiling keyboard.c...
+gd32f10x_it.c(39): warning: In file included from...
+./CANopenNode/keypad\CO_driver_ST32F103.h(11): warning: In file included from...
+../GD_KEYPAD\main.h(18): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+gd32f10x_it.c(59): warning: function 'HardFault_Handler' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+gd32f10x_it.c(72): warning: function 'MemManage_Handler' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+gd32f10x_it.c(85): warning: function 'BusFault_Handler' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+gd32f10x_it.c(98): warning: function 'UsageFault_Handler' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+5 warnings generated.
+compiling gd32f10x_it.c...
 compiling os_systick.c...
 compiling gd32f10x_dbg.c...
-compiling gd32f10x_fwdgt.c...
-compiling gd32f10x_gpio.c...
-compiling gd32f10x_misc.c...
-compiling gd32f10x_fmc.c...
 compiling gd32f10x_can.c...
+compiling cmsis_os2.c...
+compiling gd32f10x_fmc.c...
+compiling gd32f10x_fwdgt.c...
+compiling gd32f10x_misc.c...
+compiling gd32f10x_gpio.c...
 compiling gd32f10x_pmu.c...
-compiling gd32f10x_spi.c...
 compiling gd32f10x_rcu.c...
 assembling startup_gd32f10x_hd.s...
-compiling cmsis_os2.c...
+compiling gd32f10x_spi.c...
 compiling system_gd32f10x.c...
 compiling freertos_evr.c...
-compiling gd32f10x_timer.c...
 compiling list.c...
-compiling event_groups.c...
 compiling port.c...
+compiling event_groups.c...
 compiling heap_4.c...
+compiling gd32f10x_timer.c...
 compiling timers.c...
 compiling queue.c...
 compiling tasks.c...
 linking...
-Program Size: Code=36944 RO-data=1940 RW-data=804 ZI-data=17196  
-".\Objects\KEYPAD.axf" - 0 Error(s), 0 Warning(s).
+Program Size: Code=36992 RO-data=1940 RW-data=804 ZI-data=14204  
+".\Objects\KEYPAD.axf" - 0 Error(s), 83 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -136,70 +531,70 @@ Package Vendor: GigaDevice
       Include file:  CMSIS\RTOS2\FreeRTOS\Config\ARMCM\FreeRTOSConfig.h
 
    * Component: ARM.FreeRTOS::RTOS:Core:Cortex-M:10.5.1
-      Source file:   Source\portable\GCC\ARM_CM3\port.c
-      Include file:  Source\include\semphr.h
       Include file:  Source\include\FreeRTOS.h
-      Source file:   Source\queue.c
-      Source file:   Source\tasks.c
-      Include file:  Source\include\task.h
-      Include file:  Source\include\queue.h
       Source file:   Source\list.c
+      Source file:   Source\portable\GCC\ARM_CM3\port.c
+      Source file:   Source\queue.c
+      Include file:  Source\include\semphr.h
+      Include file:  Source\include\queue.h
+      Include file:  Source\include\task.h
+      Source file:   Source\tasks.c
       Source file:   CMSIS\RTOS2\FreeRTOS\Source\freertos_evr.c
 
    * Component: ARM.FreeRTOS::RTOS:Event Groups:10.5.1
-      Source file:   Source\event_groups.c
       Include file:  Source\include\event_groups.h
+      Source file:   Source\event_groups.c
 
    * Component: ARM.FreeRTOS::RTOS:Heap:Heap_4:10.5.1
       Source file:   Source\portable\MemMang\heap_4.c
 
    * Component: ARM.FreeRTOS::RTOS:Timers:10.5.1
-      Include file:  Source\include\timers.h
       Source file:   Source\timers.c
+      Include file:  Source\include\timers.h
 
    * Component: ARM::CMSIS:CORE:5.6.0
 
    * Component: ARM::CMSIS:RTOS2:FreeRTOS:Cortex-M:10.5.1
-      Include file:  CMSIS\RTOS2\FreeRTOS\Include\freertos_mpool.h
       Source file:   CMSIS\RTOS2\FreeRTOS\Source\cmsis_os2.c
       Source file:   CMSIS\RTOS2\FreeRTOS\Source\ARM\clib_arm.c
       Source file:   CMSIS\RTOS2\FreeRTOS\Source\os_systick.c
+      Include file:  CMSIS\RTOS2\FreeRTOS\Include\freertos_mpool.h
 
    * Component: GigaDevice::Device:GD32F10x_StdPeripherals:CAN:2.2.4
       Include file:  Device\Firmware\Peripherals\inc\gd32f10x_can.h
       Source file:   Device\Firmware\Peripherals\src\gd32f10x_can.c
 
    * Component: GigaDevice::Device:GD32F10x_StdPeripherals:DBG:2.2.4
-      Source file:   Device\Firmware\Peripherals\src\gd32f10x_dbg.c
       Include file:  Device\Firmware\Peripherals\inc\gd32f10x_dbg.h
+      Source file:   Device\Firmware\Peripherals\src\gd32f10x_dbg.c
 
    * Component: GigaDevice::Device:GD32F10x_StdPeripherals:FMC:2.2.4
       Include file:  Device\Firmware\Peripherals\inc\gd32f10x_fmc.h
       Source file:   Device\Firmware\Peripherals\src\gd32f10x_fmc.c
 
    * Component: GigaDevice::Device:GD32F10x_StdPeripherals:FWDGT:2.2.4
-      Source file:   Device\Firmware\Peripherals\src\gd32f10x_fwdgt.c
       Include file:  Device\Firmware\Peripherals\inc\gd32f10x_fwdgt.h
+      Source file:   Device\Firmware\Peripherals\src\gd32f10x_fwdgt.c
 
    * Component: GigaDevice::Device:GD32F10x_StdPeripherals:GPIO:2.2.4
       Include file:  Device\Firmware\Peripherals\inc\gd32f10x_gpio.h
       Source file:   Device\Firmware\Peripherals\src\gd32f10x_gpio.c
 
    * Component: GigaDevice::Device:GD32F10x_StdPeripherals:MISC:2.2.4
-      Include file:  Device\Firmware\Peripherals\inc\gd32f10x_misc.h
       Source file:   Device\Firmware\Peripherals\src\gd32f10x_misc.c
+      Include file:  Device\Firmware\Peripherals\inc\gd32f10x_misc.h
 
    * Component: GigaDevice::Device:GD32F10x_StdPeripherals:PMU:2.2.4
-      Source file:   Device\Firmware\Peripherals\src\gd32f10x_pmu.c
       Include file:  Device\Firmware\Peripherals\inc\gd32f10x_pmu.h
+      Source file:   Device\Firmware\Peripherals\src\gd32f10x_pmu.c
 
    * Component: GigaDevice::Device:GD32F10x_StdPeripherals:RCU:2.2.4
-      Source file:   Device\Firmware\Peripherals\src\gd32f10x_rcu.c
       Include file:  Device\Firmware\Peripherals\inc\gd32f10x_rcu.h
+      Source file:   Device\Firmware\Peripherals\src\gd32f10x_rcu.c
 
    * Component: GigaDevice::Device:GD32F10x_StdPeripherals:SPI_I2S:2.2.4
-      Include file:  Device\Firmware\Peripherals\inc\gd32f10x_spi.h
       Source file:   Device\Firmware\Peripherals\src\gd32f10x_spi.c
+      Include file:  Device\Firmware\Peripherals\inc\gd32f10x_spi.h
 
    * Component: GigaDevice::Device:GD32F10x_StdPeripherals:TIMER:2.2.4
       Source file:   Device\Firmware\Peripherals\src\gd32f10x_timer.c
@@ -212,7 +607,7 @@ Package Vendor: GigaDevice
       Include file:  Device\Include\gd32f10x.h
       Source file:   Device\Source\ARM\startup_gd32f10x_hd.s
       Source file:   Device\Source\system_gd32f10x.c
-Build Time Elapsed:  00:00:03
+Build Time Elapsed:  00:00:06
 </pre>
 </body>
 </html>

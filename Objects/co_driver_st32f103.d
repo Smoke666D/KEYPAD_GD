@@ -26,4 +26,15 @@
   C:\Users\i.dymov\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include\cmsis_os2.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
   CANopenNode\keypad\CO_driver_target.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h ..\GD_KEYPAD\init.h \
+  C:\Users\i.dymov\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\FreeRTOS.h \
+  RTE\RTOS\FreeRTOSConfig.h \
+  C:\Users\i.dymov\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h \
+  C:\Users\i.dymov\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\projdefs.h \
+  C:\Users\i.dymov\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\portable.h \
+  C:\Users\i.dymov\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\deprecated_definitions.h \
+  C:\Users\i.dymov\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\portable\GCC\ARM_CM3\portmacro.h \
+  C:\Users\i.dymov\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\mpu_wrappers.h \
+  C:\Users\i.dymov\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\task.h \
+  C:\Users\i.dymov\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\list.h \
+  ..\GD_KEYPAD\flash_data.h ..\GD_KEYPAD\main.h

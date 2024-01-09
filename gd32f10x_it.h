@@ -58,7 +58,8 @@ void DebugMon_Handler(void);
 /* this function handles PendSV exception */
 void PendSV_Handler(void);
 /* this function handles external lines 10 to 15 interrupt request */
-void CAN0_RX0_IRQHandler(void);
+
+void CAN0_RX1_IRQHandler(void);
 void USBD_LP_CAN0_RX0_IRQHandler( void); 
 void CAN0_EWMC_IRQHandler ( void );
 void USBD_HP_CAN0_TX_IRQHandler( void );

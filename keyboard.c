@@ -28,7 +28,7 @@ static unsigned int  COUNTERS[KEYBOARD_COUNT]                   = { 0U };
 static unsigned char CODES[KEYBOARD_COUNT]                      = { kl1_key, kl2_key, kl3_key, kl4_key ,kl5_key, kl6_key,kl7_key, kl8_key };
 
 
-uint8_t              KeyboardBuffer[ 16U * sizeof( KeyEvent ) ] = { 0U };
+static uint8_t              KeyboardBuffer[ 16U * sizeof( KeyEvent ) ] = { 0U };
 /*---------------------------------------------------------------------------------------------------*/
 void vSetupKeyboard( void )
 {
@@ -118,7 +118,7 @@ void vKeyboardTask( void * argument )
       }
     }
   }
-  return;
+
 }
 
 
